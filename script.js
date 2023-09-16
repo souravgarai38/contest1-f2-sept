@@ -67,15 +67,13 @@ function checkAgeAbove25() {
 // 7. Unique Professions
 function uniqueProfessions() {
   let unique = {};
-  let result = [];
 
   for(let i of data){
     if(!(i.profession in unique)){
       unique[i.profession] = undefined;
-      result.push(i.profession);
     }
   }
-  console.log('All unique professions:', result);
+  console.log('All unique professions:', Object.keys(unique));
 }
 
 // 8. Sort by Age
@@ -89,7 +87,7 @@ function updateJohnsProfession() {
   data.forEach(e => {
     if(e.name === 'john'){
       e.profession = 'manager';
-      console.log(`Profession of jhon updated to manager.\nName: ${e.name}, Age: ${e.age}, Profession: ${e.profession}`);
+      console.log(`Profession of 'jhon' is updated to manager.\nName: ${e.name}, Age: ${e.age}, Profession: ${e.profession}`);
     }
   });
 }
@@ -101,5 +99,6 @@ function getTotalProfessions() {
     if(e.profession in unique) unique[e.profession] = unique[e.profession] + 1;
     else unique[e.profession] = 1;
   });
-  console.log('Total Professions:', unique);
+  console.log('Professions Count:', unique);
+  console.log('Total Unique Professions:', Object.keys(unique).length);
 }
