@@ -33,8 +33,8 @@ function removeAdmin() {
     }
   }
 
-  console.log('Removed: ', result);
-  console.log('After Remove: ', data);
+  console.log('Removed Data: ', result);
+  console.log('Data Present After Remove: ', data);
 }
 
 // 4. Concatenate dataay
