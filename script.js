@@ -1,6 +1,6 @@
 const data = [
-  { name: "john", age: 24, profession: "developer" },
-  { name: "jane", age: 27, profession: "admin" },
+  { name: "john", age: 24, profession: "admin" },
+  { name: "jane", age: 27, profession: "developer" },
 ];
 
 // 1. Print Developers
@@ -9,6 +9,7 @@ function printDeveloper() {
   for(let i of data.filter(e => e.profession == 'developer')){
     console.log(`Name: ${i.name}, Age: ${i.age}, Profession: ${i.profession}`);
   }
+  if(data.filter(e => e.profession == 'developer').length == 0) console.log('There is no developer present in the list');
 }
 
 // 2. Add Data
@@ -60,8 +61,8 @@ function averageAge() {
 function checkAgeAbove25() {
   let age25 = data.filter(e => e.age>25);
 
-  if(age25.length>0) console.log('Valid');
-  else console.log('Invalid');
+  if(age25.length>0) console.log('Valid!! Age above 25 is present.');
+  else console.log('Invalid!! Age above 25 is not present');
 }
 
 // 7. Unique Professions
